@@ -69,6 +69,7 @@ export default {
           div.html("# <strong>" + d.label + "</strong></br>" + "<strong>" + d.memberCount + "</strong> members.")
             .style("left", (d3.event.pageX+12) + "px")
             .style("top", (d3.event.pageY-10) + "px")
+            .style("font-family", "share")
             .style("color", "white")
             .style("opacity", 1)
             .style("display","block");
@@ -81,12 +82,14 @@ export default {
         .attr('x', (d, i)=> (i+1) * 115)
         .text((d)=> d.label)
         .style("fill", "white")
+        .style("font-family", "share")
         .on("mousemove",function(d){
           var mouseVal = d3.mouse(this);
             div.style("display","none");
             div.html("# <strong>" + d.label + "</strong></br>" + "<strong>" + d.memberCount + "</strong> members.")
               .style("left", (d3.event.pageX+12) + "px")
               .style("top", (d3.event.pageY-10) + "px")
+              .style("font-family", "share")
               .style("color", "white")
               .style("opacity", 1)
               .style("display","block");

@@ -1,10 +1,12 @@
 @import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Share|Share+Tech');
 
 .jumbotron{
   color: white;
   background-color: #284673;
 }
 
-body{
+body {
+  font-family: "share tech";
   background-color: #232a32;
 }
