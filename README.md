@@ -4,6 +4,9 @@
 
 Slackチャンネルとそれに参加しているメンバーを一覧表示する。
 
+[http://slack-channels.jacoyutorius.com.s3-website-ap-northeast-1.amazonaws.com/](http://slack-channels.jacoyutorius.com.s3-website-ap-northeast-1.amazonaws.com/)
+
+
 ![https://s3-ap-northeast-1.amazonaws.com/jacoyutorius.images/slack-channels/slack-channel-chart_1.png](https://s3-ap-northeast-1.amazonaws.com/jacoyutorius.images/slack-channels/slack-channel-chart_1.png)
 
 ![https://s3-ap-northeast-1.amazonaws.com/jacoyutorius.images/slack-channels/slack-channel-chart_2.jpg](https://s3-ap-northeast-1.amazonaws.com/jacoyutorius.images/slack-channels/slack-channel-chart_2.jpg)

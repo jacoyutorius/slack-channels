@@ -12,3 +12,6 @@ dist
 
 .editorconfig
 .eslintrc.js
+
+s3_website.yml
+.ruby-version
