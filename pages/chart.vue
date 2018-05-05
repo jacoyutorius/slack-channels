@@ -52,23 +52,30 @@ export default {
 
       const color = d3.scaleOrdinal(d3.schemeCategory10);
 
+      // アニメーション
       g.append("circle")
+        .transition()
+        .delay(500)
+        .duration(2000)
         .attr('cy', 140)
         .attr('cx', (d, i)=> (i+1) * 115)
         .attr('r', (d)=> d.memberCount * 4)
-        .style("fill", function(d){return color(d.memberCount * Math.random(10) * 10);})
-        .on("mousemove",function(d){
-            var mouseVal = d3.mouse(this);
-            div.style("display","none");
-            div.html("# <strong>" + d.label + "</strong></br>" + "<strong>" + d.memberCount + "</strong> members.")
-              .style("left", (d3.event.pageX+12) + "px")
-              .style("top", (d3.event.pageY-10) + "px")
-              .style("color", "white")
-              .style("opacity", 1)
-              .style("display","block");
-          })
-        .on("mouseout",function(){div.html(" ").style("display","none");});
+        .style("fill", function(d){return color(d.memberCount * Math.random(10) * 5);})
+        
+      // マウスカーソルが円に乗ったときのイベント
+      g.on("mousemove",function(d){
+          var mouseVal = d3.mouse(this);
+          div.style("display","none");
+          div.html("# <strong>" + d.label + "</strong></br>" + "<strong>" + d.memberCount + "</strong> members.")
+            .style("left", (d3.event.pageX+12) + "px")
+            .style("top", (d3.event.pageY-10) + "px")
+            .style("color", "white")
+            .style("opacity", 1)
+            .style("display","block");
+        })
+        .on("mouseout",function(){div.html(" ").style("display","none");});;
 
+      // チャンネル名のラベル
       g.append("text")
         .attr('y', 260)
         .attr('x', (d, i)=> (i+1) * 115)
