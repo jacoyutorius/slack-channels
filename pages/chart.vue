@@ -1,7 +1,7 @@
 <template>
   <div class="_container">
     <b-navbar toggleable="md" type="dark" variant="dark" v-bind:style="pageWidthStyle">
-      <b-navbar-brand href="/">Slack Channels</b-navbar-brand>
+      <b-navbar-brand v-bind:to="'/'">Slack Channels</b-navbar-brand>
     </b-navbar>
     
     <svg v-bind:width="pageWidth" height="960" font-family="sans-serif" font-size="10" text-anchor="middle"></svg>
@@ -34,10 +34,8 @@ export default {
     ...mapGetters(["channels", "users"])
   },
   mounted: function(){
+    // ビュー全体がレンダリングされた後にのみ実行されるコード
     this.$nextTick(function () {
-      // ビュー全体がレンダリングされた後にのみ実行されるコード
-      // console.table(this.sortedChannels());
-      this.sortedChannels();
 
       const div = d3.select("body")
         .append("div") 
@@ -96,13 +94,6 @@ export default {
           })
         .on("mouseout",function(){div.html(" ").style("display","none");});
     })
-  },
-  methods: {
-    sortedChannels: function(){
-      return this.channels.sort(function(a, b){
-        return b.members.length - a.members.length;
-      })
-    }
   }
 }
 </script>
