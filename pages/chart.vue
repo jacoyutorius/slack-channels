@@ -103,9 +103,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-._container, svg {
-  background-color: #232a32 !important;
-}
-</style>
