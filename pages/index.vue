@@ -4,9 +4,13 @@
       <b-navbar toggleable="md" type="dark" variant="dark">
 
         <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
-        <b-navbar-brand href="#">Slack Channels</b-navbar-brand>
+        <b-navbar-brand href="/">Slack Channels</b-navbar-brand>
 
         <b-collapse is-nav id="nav_collapse">
+          <b-navbar-nav>
+            <b-nav-item href="/chart">Chart</b-nav-item>
+          </b-navbar-nav>
+
           <b-navbar-nav class="ml-auto">
             <b-nav-item-dropdown text="Channel" right>
               <b-dropdown-item v-bind:href="'#' + channel.id" v-for="channel in channels" v-bind:key="channel.id">{{ channel.name }}</b-dropdown-item>
